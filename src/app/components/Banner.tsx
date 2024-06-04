@@ -4,8 +4,8 @@ import iphone1 from "/public/images/iPhone-13-Pro-Front-1.png";
 import iphone2 from "/public/images/iPhone-13-Pro-Front-2.png";
 import iphone3 from "/public/images/iPhone-13-Pro-Front-3.png";
 import backgroundCircle from "/public/images/background-circle.png";
-import ribbonImage from "/public/images/ribbon.svg";
-import { AchievementsIcon, ArrowIcon, FinanceIcon, PlayIcon } from "./Icons";
+import { ArrowIcon, PlayIcon } from "./Icons";
+import { BrandRibbon } from "./Elements";
 
 const Banner = () => {
   return (
@@ -32,13 +32,7 @@ const Banner = () => {
         </span>
 
         <div className="relative">
-          <Image
-            priority
-            src={ribbonImage}
-            width={500}
-            height={100}
-            alt="ribbon"
-          />
+          <BrandRibbon className="" />
         </div>
       </div>
       <div className="relative">
