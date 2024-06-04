@@ -9,14 +9,16 @@ interface props {
 }
 const CustomLink = ({ href, title, className }: props) => (
   <Link aria-label={title} href={href}>
-    <span className={`font-medium capitalize ${className}`}>{title}</span>
+    <span className={`font-medium text-sm capitalize ${className}`}>
+      {title}
+    </span>
   </Link>
 );
 
 const Footer = () => {
   return (
     <>
-      <footer className="flex justify-around mt-20">
+      <footer className="flex justify-around mt-20 px-20">
         <div className="flex flex-col gap-y-2 ">
           <Link href="/">
             <UifryIcon className="w-24" />
@@ -52,9 +54,9 @@ const Footer = () => {
         <div className="flex flex-col gap-y-4">
           <span className="text-2xl font-medium capitalize">newsletter</span>
           <CustomLink href="/" title="stay up to date" className="" />
-          <form className="flex gap-3">
+          <form className="flex gap-2">
             <input
-              className="p-3"
+              className="px-2 w-28"
               type="email"
               name="email"
               id="email"
@@ -66,8 +68,8 @@ const Footer = () => {
           </form>
         </div>
       </footer>
-      <div className="flex items-center justify-center mt-16 mx-40  border-t-2">
-        <span className="text-md font-medium p-4">
+      <div className="flex items-center justify-center mt-16 mx-40 border-t-2">
+        <span className="text-md font-medium p-6">
           Copyright &copy; {new Date().getFullYear()} Uifry &nbsp; • &nbsp; All
           Rights Reserved
         </span>
