@@ -3,6 +3,7 @@ import Image from "next/image";
 import iphone1 from "/public/images/iPhone-13-Pro-Front-1.png";
 import iphone2 from "/public/images/iPhone-13-Pro-Front-2.png";
 import iphone3 from "/public/images/iPhone-13-Pro-Front-3.png";
+import backgroundCircle from "/public/images/background-circle.png";
 
 const Banner = () => {
   return (
@@ -25,7 +26,7 @@ const Banner = () => {
       <div className="relative">
         <Image
           priority
-          className="relative top-0 z-20"
+          className="relative top-0 z-30"
           src={iphone1}
           width={400}
           height={100}
@@ -33,7 +34,7 @@ const Banner = () => {
         />
         <Image
           priority
-          className="absolute top-14 left-20 z-10"
+          className="absolute top-14 left-20 z-20"
           src={iphone2}
           width={400}
           height={100}
@@ -41,9 +42,17 @@ const Banner = () => {
         />
         <Image
           priority
-          className="absolute top-24 left-40 z-0"
+          className="absolute top-24 left-40 z-10"
           src={iphone3}
           width={340}
+          height={100}
+          alt="iphone"
+        />
+        <Image
+          priority
+          className="absolute top-5 left-20 z-0"
+          src={backgroundCircle}
+          width={600}
           height={100}
           alt="iphone"
         />
