@@ -38,34 +38,34 @@ const Banner = () => {
       <div className="relative">
         <Image
           priority
-          className="relative top-0 z-30"
+          className="relative top-2 z-30"
           src={iphone1}
-          width={400}
-          height={100}
+          width={572}
+          height={752}
           alt="iphone"
         />
         <Image
           priority
-          className="absolute top-14 left-20 z-20"
+          className="absolute top-20 left-32 z-20"
           src={iphone2}
-          width={400}
-          height={100}
+          width={572}
+          height={753}
           alt="iphone"
         />
         <Image
           priority
-          className="absolute top-24 left-40 z-10"
+          className="absolute top-36 left-60 z-10"
           src={iphone3}
-          width={340}
-          height={100}
+          width={476}
+          height={752}
           alt="iphone"
         />
         <Image
           priority
-          className="absolute top-5 left-20 z-0"
+          className="absolute top-6 left-28 z-0"
           src={backgroundCircle}
-          width={600}
-          height={100}
+          width={656}
+          height={726}
           alt="iphone"
         />
       </div>
