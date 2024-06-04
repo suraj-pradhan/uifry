@@ -1,5 +1,5 @@
 import React from "react";
-import { UifryIcon } from "./Icons";
+import { CallingIcon, MessageIcon, UifryIcon } from "./Icons";
 import Link from "next/link";
 
 interface props {
@@ -16,11 +16,20 @@ const CustomLink = ({ href, title, className }: props) => (
 const Footer = () => {
   return (
     <>
-      <footer className="flex justify-around">
-        <nav>
-          <UifryIcon className="w-24" />
-          <Link href="mailto:help@frybix.com">Help@Frybix.Com</Link>
-        </nav>
+      <footer className="flex justify-around mt-20">
+        <div className="flex flex-col gap-y-2 ">
+          <Link href="/">
+            <UifryIcon className="w-24" />
+          </Link>
+          <div className="flex gap-x-2">
+            <MessageIcon className="" />
+            <Link href="mailto:help@frybix.com">help@frybix.com</Link>
+          </div>
+          <div className="flex gap-x-2">
+            <CallingIcon className="" />
+            <span> +1234 456 678 89</span>
+          </div>
+        </div>
         <div className="flex flex-col gap-y-4">
           <span className="text-2xl font-medium capitalize">links</span>
           <CustomLink href="/" title="home" className="" />
@@ -43,21 +52,22 @@ const Footer = () => {
         <div className="flex flex-col gap-y-4">
           <span className="text-2xl font-medium capitalize">newsletter</span>
           <CustomLink href="/" title="stay up to date" className="" />
-          <span>
+          <form className="flex gap-3">
             <input
+              className="p-3"
               type="email"
               name="email"
               id="email"
               placeholder="Your email"
             />
-            <button className="bg-black text-white px-8 py-4 rounded-sm">
+            <button className="px-6 py-3 bg-black text-white rounded-sm ">
               Subscribe
             </button>
-          </span>
+          </form>
         </div>
       </footer>
-      <div className="flex items-center justify-center">
-        <span className="text-md font-medium">
+      <div className="flex items-center justify-center mt-16 mx-40  border-t-2">
+        <span className="text-md font-medium p-4">
           Copyright &copy; {new Date().getFullYear()} Uifry &nbsp; • &nbsp; All
           Rights Reserved
         </span>
