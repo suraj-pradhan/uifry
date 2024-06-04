@@ -39,7 +39,7 @@ export default function Header() {
       </nav>
 
       <span>
-        <button className="px-9 py-3 bg-slate-900 text-white rounded-sm">
+        <button className="px-9 py-3 bg-slate-900 text-white rounded-md">
           Download
         </button>
       </span>
