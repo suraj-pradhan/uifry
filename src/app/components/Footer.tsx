@@ -8,7 +8,7 @@ interface props {
   className: string;
 }
 const CustomLink = ({ href, title, className }: props) => (
-  <Link href={href}>
+  <Link aria-label={title} href={href}>
     <span className={`font-medium capitalize ${className}`}>{title}</span>
   </Link>
 );
@@ -60,7 +60,7 @@ const Footer = () => {
               id="email"
               placeholder="Your email"
             />
-            <button className="px-6 py-3 bg-black text-white rounded-sm ">
+            <button className="px-6 py-3 bg-black text-white rounded-md ">
               Subscribe
             </button>
           </form>

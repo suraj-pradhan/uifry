@@ -1,11 +1,12 @@
 import React from "react";
-import { CircleBackground } from "./Backgrounds";
 import Image from "next/image";
-import iphone1 from "/public/images/iphone1.png";
+import iphone1 from "/public/images/iPhone-13-Pro-Front-1.png";
+import iphone2 from "/public/images/iPhone-13-Pro-Front-2.png";
+import iphone3 from "/public/images/iPhone-13-Pro-Front-3.png";
 
 const Banner = () => {
   return (
-    <div className="flex justify-around ">
+    <div className="flex justify-center items-center ">
       <div className="flex flex-col gap-y-5">
         <span className="capitalize text-5xl font-bold">
           make the best <br /> financial decesions
@@ -15,20 +16,35 @@ const Banner = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </p>
         <span>
-          <button className="px-4 py-2 bg-slate-900 text-white rounded-sm">
+          <button className="px-4 py-2 bg-black text-white rounded-md">
             Get Started
           </button>
           <button className="px-4 py-2 rounded-sm">Watch Video</button>
         </span>
       </div>
       <div className="relative">
-        <CircleBackground className="w-96 h-96 " />
         <Image
           priority
-          className="absolute top-4"
+          className="relative top-0 z-20"
           src={iphone1}
           width={400}
-          height={200}
+          height={100}
+          alt="iphone"
+        />
+        <Image
+          priority
+          className="absolute top-14 left-20 z-10"
+          src={iphone2}
+          width={400}
+          height={100}
+          alt="iphone"
+        />
+        <Image
+          priority
+          className="absolute top-24 left-40 z-0"
+          src={iphone3}
+          width={340}
+          height={100}
           alt="iphone"
         />
       </div>
